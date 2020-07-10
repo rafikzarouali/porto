@@ -20,6 +20,8 @@ body{
 .navbar-default .navbar-brand{
     color: darkgray;
     text-transform: uppercase;
+    font-family: 'Bangers', cursive;
+    font-family: 'Montserrat Subrayada', sans-serif;
     font-weight: bold;
 }
 .navbar-default .navbar-nav>li>a{
@@ -92,7 +94,7 @@ h1,h2,h3{
     text-align: center;
     font-family: 'Bangers', cursive;
     color: white;
-   
+   font-family: 'Montserrat Subrayada', sans-serif;
     text-transform: uppercase;
 }
 
