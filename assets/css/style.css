@@ -6,6 +6,9 @@ body{
     scroll-behavior: smooth;
   
 }
+.show{
+    background:black;
+}
 .menu{
     background: none;
 } 
