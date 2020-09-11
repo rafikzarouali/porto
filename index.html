@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat+Subrayada&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat+Subrayada&display=swap" rel="stylesheet">
-
+   
     <title>Welcome to My Portfolio</title>
 </head>
-<body>
- <section id="home">
+<div id="loader"></div>
+<body onload="myFunction()" style="margin:0;" >
+  
+<div id="mydiv" class="animate-bottom">
+ <section id="home"  >
   <div class="menu navbar-fixed-top ">
   <nav class="navbar  navbar-default bg-light ">
       <div class="navbar-header">
@@ -30,7 +34,7 @@
   
       
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav">
           <li><a href="#" id="home">Home</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#competence"">Education</a></li>
@@ -44,17 +48,14 @@
   </nav>
 </div>
 
-<div class="container" style="background-image: url(images/back.jpg);background-size: cover;background-repeat: no-repeat;">
+<div class="container" style="background-image: linear-gradient(to top, #051937, #002f46, #004346, #24543e, #56623b);">
   <div class="row " >
-    
     <div class="overlay"></div>
-    
     <div class="home">
       <h1>Welcome to my Portofolio</h1>
-       
       <img src="images/raf.png" class="img-a" class="">
       <h2> Zarouali Abderrafik</h2>
-     <h3>Web Developer</h3>
+      <h3>Web Developer</h3>
       <button class="btn btn-danger"><a href=""> Telecharger Mon Cv</a></button>
       </div>
      
@@ -158,6 +159,7 @@
   <div class="row">
     <Section id="competence" class="comp">
     <p class=" sec ra " >Education</p>
+ 
       <div class=" col-lg-6 col-md-6 col-sm-12">
         <div class="card-ra ">
          <img src="images/Grad.png" alt="" width="25%">
@@ -173,10 +175,11 @@
           <p class="grad">titulaire baccalaurét 2019</p>
           <hr class="new1">
           <p class="grad">Filiere:Science Physique</p>
-          
+
 
         </div>
       </div>
+      <br>
   </Section>
   </div>
 </div>
@@ -228,22 +231,20 @@
 </div>
 
 
+    
+    
+    
+    
+    
+</div>
+    
+    
+    
+    
+    
+    
+    
 
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
 <script
@@ -251,9 +252,22 @@ src="https://code.jquery.com/jquery-3.5.1.js"
 integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
 crossorigin="anonymous"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    
     <script src="assets/js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script>
+  var myVar;
+  
+  function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+  }
+  
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("mydiv").style.display = "block";
+  }
+  </script>
 </body>
 </html>
