@@ -17,6 +17,17 @@ html{
     height: 120px;
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
+    font-size: 40px;
+  text-align: center;
+  color: red;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-decoration: wavy;
+  }
+    .load{
+      color: blue;
+      display: block;
+      margin-top: -22px;
+      
   }
   
   @-webkit-keyframes spin {
