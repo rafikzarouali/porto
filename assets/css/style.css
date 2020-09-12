@@ -1,6 +1,10 @@
 html{
     scroll-behavior: smooth;
 }
+.back{
+    background: #002f46;
+    min-height: 340px;
+}
 #loader {
     position: absolute;
     left: 50%;
