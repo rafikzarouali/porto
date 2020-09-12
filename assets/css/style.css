@@ -1,6 +1,9 @@
 html{
     scroll-behavior: smooth;
 }
+label
+{color:white;
+}
 #loader {
     position: absolute;
     left: 50%;
