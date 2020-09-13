@@ -220,7 +220,7 @@
 </div>
 </div>
 </div>
-<section class="contact-section text-center" id="contact">
+<section class="contact-section text-center">
   <div class="container">
     <div class="row" >
       <div class="back">
@@ -246,33 +246,25 @@
                     <div class="input-group">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                       </span>
-                      <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required/>
+                      <input type="email" name="email" class="form-control" id="subject" placeholder="Enter email" required/>
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label for="subject">Objet</label>
-                    <div class="input-group">
-                      <span class="input-group-addon"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chat-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M2 1h12a1 1 0 0 1 1 1v11.586l-2-2A2 2 0 0 0 11.586 11H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>
-                      </svg></span>
-                      </span>
-                      <input type="text" name="subject" class="form-control" id="subject" placeholder="Subject" required/></div>
-                  </div>
+                  
                 </div>
                 <div class="col-md-6">
+                <div class="form-group">
                   <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea name="message" id="message" class="form-control" rows="7" cols="25"  placeholder="Message" required></textarea>
+                    <textarea name="message" id="message" class="form-control" rows="5" cols="20"  placeholder="Message" width="100%"required></textarea>
                   </div>
                 </div>
+              </div>
                 <div class="col-md-12">
                   
                   
                 
                   
-                  <button type="submit" class="btn btn-primary" id="btnContactUs" data-toggle="modal" data-target="#exampleModalCenter">
-                    Envoyer
-                  </button>
+                 <input type="button" onclick="sendEmail();" value="send the mail">
                    
                 </div>
               </div>
@@ -380,5 +372,24 @@ crossorigin="anonymous"></script>
       }
     }
 </script>
+<script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script type="text/javascript">
+    function sendEmail() {
+      var mailSubject =  document.getElementById("subject").value
+        var mailBody = document.getElementById("message").value
+            Email.send({
+                
+                SecureToken :"4eba5f4e-ad1f-46f3-974d-764e96e33e83",
+                 From : "di19-zarouali@gmail.com",
+                  To : 'rafiknirvana@gmail.com',
+                Subject: mailSubject,
+                Body: mailBody,
+            })
+                .then(function (message) {
+                    alert("mail sent successfully")
+                });
+        }
+   </script>
 </body>
 </html>
